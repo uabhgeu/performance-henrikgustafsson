@@ -127,6 +127,12 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">TOKEN</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:3000/api/rooms" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -155,7 +161,7 @@
                 </elementProp>
                 <elementProp name="X-User-Auth" elementType="Header">
                   <stringProp name="Header.name">X-User-Auth</stringProp>
-                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;17a88d963fa9d97ac36536f8dc396e1a&quot;}</stringProp>
+                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -192,7 +198,7 @@
                 </elementProp>
                 <elementProp name="X-User-Auth" elementType="Header">
                   <stringProp name="Header.name">X-User-Auth</stringProp>
-                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;17a88d963fa9d97ac36536f8dc396e1a&quot;}</stringProp>
+                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -229,7 +235,7 @@
                 </elementProp>
                 <elementProp name="X-User-Auth" elementType="Header">
                   <stringProp name="Header.name">X-User-Auth</stringProp>
-                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;17a88d963fa9d97ac36536f8dc396e1a&quot;}</stringProp>
+                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -266,7 +272,7 @@
                 </elementProp>
                 <elementProp name="X-User-Auth" elementType="Header">
                   <stringProp name="Header.name">X-User-Auth</stringProp>
-                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;17a88d963fa9d97ac36536f8dc396e1a&quot;}</stringProp>
+                  <stringProp name="Header.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -282,7 +288,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;17a88d963fa9d97ac36536f8dc396e1a&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;username&quot;:&quot;tester01&quot;,&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
